@@ -82,4 +82,14 @@ public class User {
                 ", phoneNumber='" + phoneNumber + '\'' +
                 '}';
     }
+    
+    public User() {
+    }
+    
+    public User(final String name, final String password, final String email, final String phoneNumber) {
+        this.name = name;
+        this.password = password;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
 }
