@@ -33,6 +33,10 @@ java -jar user-web/target/user-web-v1-SNAPSHOT-war-exec.jar
 
 
 
+先访问 localhost:8080/register 进入注册页面，输入账号、密码，点击注册，控制台打印 insert 语句，页面跳转至登录页面，使用注册的账号和密码登录后，进入成功页面。
+
+
+
 ### 问题记录
 
 使用IDEA新创建的login.jsp无法正常访问，报错如下。
