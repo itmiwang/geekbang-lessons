@@ -18,6 +18,6 @@ public class LoginController implements PageController {
     @POST
     @Override
     public String execute(final HttpServletRequest request, final HttpServletResponse response) throws Throwable {
-        return "login.jsp";
+        return "success.jsp";
     }
 }

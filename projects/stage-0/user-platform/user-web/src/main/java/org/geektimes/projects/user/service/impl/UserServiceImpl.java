@@ -1,16 +1,21 @@
 package org.geektimes.projects.user.service.impl;
 
 import org.geektimes.projects.user.domain.User;
+import org.geektimes.projects.user.repository.UserRepository;
 import org.geektimes.projects.user.service.UserService;
+import org.geektimes.web.mvc.dbProxy.JdkRepositoryProxy;
 
 /**
  * @author guozq
  * @date 2021-03-03-1:48 下午
  */
 public class UserServiceImpl implements UserService {
+    
+    UserRepository userRepository = JdkRepositoryProxy.create(UserRepository.class);
+    
     @Override
     public boolean register(final User user) {
-        return false;
+        return userRepository.save(user);
     }
     
     @Override

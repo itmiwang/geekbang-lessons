@@ -9,7 +9,7 @@
         <form action="/register" method="post">
             <table>
                 <tr>
-                    <td>用户：<input name="user" type="text"></td>
+                    <td>账号：<input name="username" type="text"></td>
                 </tr>
                 <tr>
                     <td>密码：<input name="password" type="text"></td>

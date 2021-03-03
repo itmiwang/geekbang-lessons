@@ -1,6 +1,8 @@
 package org.geektimes.projects.user.repository;
 
 import org.geektimes.projects.user.domain.User;
+import org.geektimes.web.mvc.sql.Insert;
+import org.geektimes.web.mvc.sql.Select;
 
 import java.util.Collection;
 import java.util.List;
@@ -11,7 +13,8 @@ import java.util.List;
  * @since 1.0
  */
 public interface UserRepository {
-
+    
+    @Insert("insert into users (%s) values (%s)")
     boolean save(User user);
 
     boolean deleteById(Long userId);
@@ -21,6 +24,7 @@ public interface UserRepository {
     User getById(Long userId);
 
     User getByNameAndPassword(String userName, String password);
-
+    
+    @Select(value = "select * from users;", returnType = "org.geektimes.projects.user.domain.User")
     Collection<User> getAll();
 }
